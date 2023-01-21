@@ -8,10 +8,12 @@ contract CounterTest is Test {
     Counter counter;
 
     function setUp() public {
-        counter = new Counter(5);
+        counter = new Counter(7);
     }
 
     function testIncrement() public {
+        counter.incrementCount();
+        counter.incrementCount();
         counter.incrementCount();
         counter.incrementCount();
         int256 value = counter.getCount();
